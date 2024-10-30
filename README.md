@@ -70,15 +70,15 @@ pip install -e .[llm]
 #### CLI推理
 
 ```python
-CUDA_VISIBLE_DEVICES=0 swift export \
-  --ckpt_dir /home/e_commerce_lmm/results/qwenvl_swift_xray/qwen-vl-chat/v1-20240505-042908/checkpoint-990/ \
+CUDA_VISIBLE_DEVICES=7 swift export \
+  --ckpt_dir "/home/lgd/e_commerce_lmm/results/llama32vision_swift_xray/llama3_2-11b-vision-instruct/v4-20241006-070501/checkpoint-490/" \
   --merge_lora true
 
-CUDA_VISIBLE_DEVICES=0 swift infer \
-  --ckpt_dir /home/e_commerce_lmm/results/qwenvl_swift_xray/qwen-vl-chat/v1-20240505-042908/checkpoint-990-merged \
+CUDA_VISIBLE_DEVICES=7 swift infer \
+  --ckpt "/home/lgd/e_commerce_lmm/results/llama32vision_swift_xray/llama3_2-11b-vision-instruct/v4-20241006-070501/checkpoint-490-merged/"   \
   --load_dataset_config true
 ```
-### 3.模型训练（复现XrayGLM）
+### 3.模型训练（复现XrayLLama3.2vision）
 
 <details>
   <summary>硬件资源</summary>
